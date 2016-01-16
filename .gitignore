@@ -35,4 +35,4 @@ node_modules
 
 # other
 lib/backend/core/database/config.json
-lib/backend/middlewares/authentication/configs.js
+lib/backend/middlewares/authentication/config.js
