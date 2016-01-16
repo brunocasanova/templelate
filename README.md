@@ -45,10 +45,10 @@ npm run init-node-inspector
 
 ```bash
 # start server in production environment
-npm run app
+npm run start-web
 
 # start server in development environment
-npm run dev-app
+npm run start-dev
 ```
 
 ##### Frontend

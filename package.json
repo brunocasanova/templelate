@@ -14,7 +14,7 @@
     "init-inspector": "node-inspector --web-port=8083",
     "init-prod": "node lib/backend",
     "init-dev": "nodemon --debug lib/backend",
-    "start-prod": "npm run init-producton",
+    "start-web": "npm run init-producton",
     "start-dev": "npm run debug npm run init-dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
