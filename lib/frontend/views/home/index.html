@@ -1,0 +1,19 @@
+<div class="ui column">
+
+	<h1 class="ui header green">templelate</h1>
+	<%- 'session: ' + JSON.stringify( req.session ) %>
+
+</div>
+
+<div class="ui column">
+
+	<% if( req.session.flash && req.session.flash.message ){ %>
+		<div class="ui message">
+			<p>
+				<%- req.flash( 'message' ) %>
+				<i class="close icon"></i>
+			</p>
+		</div>
+	<% } %>
+
+</div>

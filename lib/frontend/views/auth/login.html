@@ -1,0 +1,30 @@
+
+<form class="ui form segment login" action="/auth/login" method="post">
+
+	<div class="two fields">
+		<div class="field">
+			<label>Username</label>
+			<input placeholder="Username" name="username" type="text">
+		</div>
+
+		<div class="field">
+			<label>Password</label>
+			<input type="password" name="password">
+		</div>
+	</div>
+
+	<div class="ui error message"></div>
+	<div class="ui success message">
+		<p><strong>Form validated!</strong> Push submit to join templelate!</p>
+	</div>
+
+	<div class="ui blue submit button">Submit</div>
+
+	<% if( req.session.flash && req.session.flash.message ){ %>
+		<div class="ui negative message">
+			<i class="close icon"></i>
+			<p><strong>Message: </strong><%- req.flash( 'message' ) %></p>
+		</div>
+	<% } %>
+
+</form>

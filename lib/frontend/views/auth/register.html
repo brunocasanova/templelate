@@ -1,0 +1,59 @@
+
+<form class="ui form segment register" action="/auth/register" method="post">
+
+	<div class="five fields">
+
+		<div class="field">
+			<label>First Name</label>
+			<input placeholder="First name" name="first_name" type="text" required/>
+		</div>
+
+		<div class="field">
+			<label>Last Name</label>
+			<input placeholder="Last name" name="last_name" type="text" />
+		</div>
+
+		<div class="field">
+			<label>Password</label>
+			<input type="password" name="password" required />
+		</div>
+
+		<div class="field">
+			<label>Email</label>
+			<input placeholder="Email" name="email" type="email" />
+		</div>
+
+		<div class="field">
+			<label>Gender</label>
+			<select name="gender" class="ui dropdown gender">
+				<option value="">Gender</option>
+				<option value="1">Male</option>
+				<option value="0">Female</option>
+			</select>
+		</div>
+
+	</div>
+
+	<div class="field">
+		<div class="ui checkbox">
+			<input type="checkbox" name="terms" tabindex="0" class="hidden">
+			<label>I agree to the <a href="/terms" class="ui link" target="_blank">Terms and Conditions</a></label>
+		</div>
+
+	</div>
+
+	<div class="ui success message">
+		<p><strong>Form validated!</strong> Push submit to join templelate!</p>
+	</div>
+
+	<div class="ui error message"></div>
+	<div class="ui blue submit button">Submit</div>
+
+	<% if( req.session.flash && req.session.flash.message ){ %>
+		<div class="ui negative message">
+			<i class="close icon"></i>
+			<div class="header"><%- req.flash( 'message' ) %></div>
+		</div>
+	<% } %>
+
+</form>

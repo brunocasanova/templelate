@@ -1,0 +1,50 @@
+{
+  "name": "templelate",
+  "version": "0.0.1",
+  "description": "templelate",
+  "main": " lib/backend/index.js",
+  "scripts": {
+    "debug": "DEBUG=templelate:*",
+    "build-webpack": "webpack --progress --colors",
+    "build-semantic": "cd lib/frontend/semantic-ui/ && gulp build",
+    "watch-webpack": "webpack --progress --colors --watch",
+    "watch-semantic": "cd lib/frontend/semantic-ui && gulp watch",
+    "init-mongo": "sudo mongod",
+    "init-mongo-express": "cd node_modules/mongo-express/ && node app.js",
+    "init-inspector": "node-inspector --web-port=8083",
+    "init-prod": "node lib/backend",
+    "init-dev": "nodemon --debug lib/backend",
+    "start-prod": "npm run init-producton",
+    "start-dev": "npm run debug npm run init-dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruno Casanova <deftonicks_me@hotmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.0.6",
+    "body-parser": "^1.14.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.0",
+    "debug": "^2.2.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-ejs-layouts": "^2.0.0",
+    "express-session": "^1.12.1",
+    "mongoose": "^4.2.9",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.0.0",
+    "passport-google": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "semantic-ui": "^2.1.6",
+    "semantic-ui-css": "^2.1.6",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "mongo-express": "^0.27.3",
+    "node-inspector": "^0.12.4",
+    "nodemon": "^1.8.1",
+    "webpack": "^1.12.9"
+  }
+}

@@ -1,0 +1,10 @@
+
+header {}
+
+section, #content {
+	height: 500px !important;
+}
+
+footer {
+	height: 100px !important;
+}

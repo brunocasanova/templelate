@@ -1,0 +1,73 @@
+<div class="ui attached stackable menu">
+
+	<a
+		class="ui black right attached fixed button sidebar-trigger"
+		style="position:fixed; left: 0px; top: 42px;"
+	>
+		<i class="content icon"></i>
+	</a>
+
+	<div class="ui container">
+
+		<a href="/home" class="item">
+			<i class="home icon"></i> Home
+		</a>
+
+		<a href="/backoffice/management" class="item">
+			<i class="grid layout icon"></i> Management
+		</a>
+
+		<a href="/backoffice" class="item">
+			<i class="user icon"></i> Bacckoffice
+		</a>
+
+		<div class="ui simple dropdown item">
+			More
+			<i class="dropdown icon"></i>
+
+			<div class="menu">
+				<a href="/ping" class="item"><i class="edit icon"></i> Ping</a>
+				<a href="/auth/logout" class="item"><i class="globe icon"></i> Logout</a>
+				<a href="/backoffice" class="item"><i class="settings icon"></i> Bacckoffice</a>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="ui container">
+		<div class="ui column">
+
+			<% if( req.session.passport && req.session.passport.user ){ %>
+				<img
+					class="ui top aligned tiny image"
+					style="height: 40px; width: 40px;" src="../../../frontend/src/img/default/placeholder.png"
+				/>
+				<span><%- req.session.account && req.session.account.username %></span>
+
+				<a href="/auth/logout" class="link">
+					Logout
+					<i class="sign out icon"></i>
+				</a>
+			<% }
+
+			else{ %>
+
+				<span>Sign in with </span>
+
+				<a href="/auth/facebook" style="height: 36px;" class="ui circular facebook icon button">
+					<i class="facebook icon"></i>
+				</a>
+
+				<span>or</span>
+
+				<a href="/auth/login" class="ui link green">
+					login
+					<i class="sign in icon"></i>
+				</a>
+
+			<% } %>
+
+		<div>
+	<div>
+
+</div>
