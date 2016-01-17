@@ -30,9 +30,6 @@ npm run init-mongo
 ###### node-inspector | mongo-express-view
 
 ```bash
-# start mongo ( daemon )
-npm run init-mongo
-
 # start mongo express view ( daemon )
 npm run init-mongo-express
 
