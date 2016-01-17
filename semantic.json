@@ -1,5 +1,5 @@
 {
-  "base": "lib/frontend/thirds",
+  "base": "semantic/",
   "paths": {
     "source": {
       "config": "src/theme.config",
@@ -17,5 +17,5 @@
   },
   "permission": false,
   "rtl": false,
-  "version": "2.1.6"
+  "version": "2.1.8"
 }
