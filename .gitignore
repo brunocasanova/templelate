@@ -36,3 +36,4 @@ node_modules
 # other
 lib/backend/core/database/config.json
 lib/backend/middlewares/authentication/config.js
+lib/frontend/semantic-ui/
