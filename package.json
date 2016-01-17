@@ -10,7 +10,7 @@
     "watch-webpack": "webpack --progress --colors --watch",
     "watch-semantic": "cd lib/frontend/semantic-ui && gulp watch",
     "init-mongo": "sudo mongod",
-    "init-mongo-express": "cd node_modules/mongo-express/ && node app.js",
+    "init-mongo-express": "cd node_modules/mongo-express/ && node app -a -u '' -p '' --port 8082",
     "init-inspector": "node-inspector --web-port=8083",
     "init-prod": "node lib/backend",
     "init-dev": "nodemon --debug lib/backend",
