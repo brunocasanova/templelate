@@ -38,6 +38,18 @@
 		<div class="ui column">
 
 			<% if( req.session.passport && req.session.passport.user ){ %>
+				
+				<% if( req.user && req.user.facebook && ! req.user.facebook.id ){ %>
+
+					<span>
+						Connect in with 
+						<a href="/auth/facebook" style="height: 36px;" class="ui facebook icon">
+							Facebook
+						</a>
+					</span>
+
+				<% } %>
+
 				<img
 					class="ui top aligned tiny image"
 					style="height: 40px; width: 40px;" src="../../../frontend/src/img/default/placeholder.png"
@@ -48,6 +60,7 @@
 					Logout
 					<i class="sign out icon"></i>
 				</a>
+
 			<% }
 
 			else{ %>
