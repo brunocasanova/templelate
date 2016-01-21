@@ -17,6 +17,7 @@ npm install
 ```
 
 ## Initiating the app
+``// Development only``
 
 ##### Database
 ###### mongo db

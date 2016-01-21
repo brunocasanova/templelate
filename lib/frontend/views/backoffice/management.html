@@ -1,1 +1,8 @@
 MANAGEMENT
+
+<% if( req.session.flash && req.session.flash.message ){ %>
+	<div class="ui message">
+		<i class="close icon"></i>
+		<div class="header"><%- req.flash( 'message' ) %></div>
+	</div>
+<% } %>
